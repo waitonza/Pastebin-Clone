@@ -1,9 +1,9 @@
-Paste Bin (Clone) For Software Testing Course
+Paste Bin (Clone) For Software Testing Course (01219343)
 ====================
 ### Purpose : 
 
-Mini Project For Software Testing Course
-Starting Test with TDD/BDD
+- Mini Project For Software Testing Course (01219343)
+- Starting Test with TDD/BDD Style
 
 ### Developemnt Info :
 
@@ -12,5 +12,5 @@ Starting Test with TDD/BDD
 
 ### Members :
 
-Mr. Wairung Tiranalinvit 		5310545620
-Mr. Punmonkol Chutcharinkul 	5310546481
+- Mr. Wairung Tiranalinvit 		5310545620
+- Mr. Punmonkol Chutcharinkul 	5310546481
