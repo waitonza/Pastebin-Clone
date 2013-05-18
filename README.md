@@ -5,7 +5,7 @@ Paste Bin (Clone) For Software Testing Course (01219343)
 - Mini Project For Software Testing Course (01219343)
 - Starting Test with TDD/BDD Style
 
-### Developemnt Info :
+### Development Info :
 
 - Ruby on Rails 3.2.13
 - Cucumber + RSpec (For Testing Framework)
