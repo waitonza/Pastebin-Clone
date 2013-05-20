@@ -15,6 +15,7 @@ When(/^I click Login button$/) do
 	click_button "Login"
 end
 
-Then(/^I shall see my login status that show successful login$/) do
-	page.should contain("Logined!")
+Then(/^I shall see home webpage$/) do
+	page.should contain("Paste Bin")
+	page.should contain("Login")
 end

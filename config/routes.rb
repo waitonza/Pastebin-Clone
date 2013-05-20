@@ -1,4 +1,6 @@
 PatebinClone::Application.routes.draw do
+  get "users/login"
+  get "users/logout"
   get "web/index"
   get "web/login"
   get "web/logout"

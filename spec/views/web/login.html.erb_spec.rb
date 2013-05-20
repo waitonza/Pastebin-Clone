@@ -31,14 +31,12 @@ describe "web/login.html.erb" do
 		end
 	end
 
-	it "renders a text field for the password" do
-		user.stub(:password => "12345")
+	it "renders a password field" do
 		render
 		rendered.should have_selector("form") do |form|
 			form.should have_selector("input",
-				:type => "text",
-				:name => "user[password]",
-				:value => "12345"
+				:type => "password",
+				:name => "user[password]"
 			)
 		end
 	end

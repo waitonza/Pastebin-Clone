@@ -3,6 +3,7 @@ class WebController < ApplicationController
   end
 
   def login
+  	@user = User.new
   end
 
   def logout

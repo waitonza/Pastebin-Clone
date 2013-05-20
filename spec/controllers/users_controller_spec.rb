@@ -1,13 +1,6 @@
 require 'spec_helper'
 
-describe WebController do
-
-  describe "GET 'index'" do
-    it "returns http success" do
-      get 'index'
-      response.should be_success
-    end
-  end
+describe UsersController do
 
   describe "GET 'login'" do
     it "returns http success" do
@@ -22,5 +15,13 @@ describe WebController do
       response.should be_success
     end
   end
-  
+
+  describe "POST create" do
+  	context "Login form login page" do
+	    it "redirect to the homepage" do
+	    	post :create
+	    	response.should redirect_to(:controller => "web", :action => "index")
+	  	end
+	 end
+   end
 end
