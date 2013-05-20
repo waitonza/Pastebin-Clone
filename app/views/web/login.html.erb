@@ -1,0 +1,10 @@
+<h1>Paste Bin Login</h1>
+<%= form_for @user do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+  <br>
+  <%= f.label :password %>
+  <%= f.text_field :password %>
+  <%= f.submit "Login" %>
+<% end %>
+<%= link_to "Back to home page", web_index_path %>
