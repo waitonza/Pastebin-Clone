@@ -26,8 +26,8 @@ describe UsersController do
 	  end
 
 	  it "creates a new user" do
-	    post :create, :user => {"username" => "waitonza",
-	    		"email" => "wairung3421@gmail.com",
+	    post :create, :user => {"username" => "ABC",
+	    		"email" => "ABC@gmail.com",
 	    		"password" => "1234567",
 	    		"password_confirmation" => "1234567"}
 	  end

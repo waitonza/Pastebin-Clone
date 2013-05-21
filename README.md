@@ -12,9 +12,19 @@ Paste Bin (Clone) For Software Testing Course (01219343)
 
 ### How to test :
 
-- 
-- 
-- 
+- RSpec for Unit Testing
+
+	rake spec
+
+	rake spec:views
+
+	rake spec:controllers
+
+	rake spec:models
+
+- Cucumber for Functional/Integration Testing
+
+	rake cucumber
 
 ### Members :
 
