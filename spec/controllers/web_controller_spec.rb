@@ -8,5 +8,5 @@ describe WebController do
       response.should be_success
     end
   end
-
+  
 end

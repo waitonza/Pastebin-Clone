@@ -13,10 +13,5 @@ class WebController < ApplicationController
       @post = params[:post]
     end
   end
-
-  def logout
-	   session[:user_id] = nil
-	   redirect_to :action => 'login'
-  end
-
+  
 end
