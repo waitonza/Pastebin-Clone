@@ -20,13 +20,11 @@ describe "web/login.html.erb" do
 	end
 
 	it "renders a text field for the username" do
-		user.stub(:username => "waitonza")
 		render
 		rendered.should have_selector("form") do |form|
 		    form.should have_selector("input",
 		      :type => "text",
-		      :name => "user[username]",
-		      :value => "waitonza"
+		      :name => "username"
 			)
 		end
 	end
@@ -36,7 +34,7 @@ describe "web/login.html.erb" do
 		rendered.should have_selector("form") do |form|
 			form.should have_selector("input",
 				:type => "password",
-				:name => "user[password]"
+				:name => "password"
 			)
 		end
 	end
