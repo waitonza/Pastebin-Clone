@@ -7,8 +7,14 @@ Paste Bin (Clone) For Software Testing Course (01219343)
 
 ### Development Info :
 
-- Ruby on Rails 3.2.13
+- Ruby on Rails 4 RC1
 - Cucumber + RSpec + Webrat (For Testing Framework)
+
+### How to test :
+
+- 
+- 
+- 
 
 ### Members :
 

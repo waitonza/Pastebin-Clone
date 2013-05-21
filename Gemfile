@@ -48,6 +48,8 @@ group :test do
   # gem 'growl' # optional - if you like notifications on Mac 
 end
 
+gem "bcrypt-ruby", :require => "bcrypt"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

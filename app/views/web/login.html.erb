@@ -1,11 +1,14 @@
-<h1>Paste Bin Login</h1>
-<%= form_for @user do |f| %>
-  <%= f.label :username %>
-  <%= f.text_field :username %>
-  <br>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <br>
-  <%= f.submit "Login" %>
-<% end %>
+<% @page_title = "Paste Bin | Login" -%>
+<div class= "Login_Form">
+	<h1>Paste Bin Login</h1>
+	<%= form_for(:user, :url => {:controller => 'users', :action => 'login_attempt'}) do |f| %>
+	  <%= f.label :username %>
+	  <%= f.text_field :username %>
+	  <br>
+	  <%= f.label :password %>
+	  <%= f.password_field :password %>
+	  <br>
+	  <%= f.submit "Log In" %>
+	<% end %>
+</div>
 <%= link_to "Back to home page", web_index_path %>

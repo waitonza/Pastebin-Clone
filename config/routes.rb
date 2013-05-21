@@ -1,11 +1,15 @@
 PatebinClone::Application.routes.draw do
+  get "users/new"
+  get "web/new"
   get "users/login"
   get "users/logout"
   get "web/index"
   get "web/login"
   get "web/logout"
+  post "users/login_attempt"
 
   resources :web
+  resources :posts
   resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

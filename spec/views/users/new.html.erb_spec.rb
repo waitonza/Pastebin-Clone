@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "web/login.html.erb" do
+describe "users/new.html.erb" do
 	let(:user) do
 		mock_model("User").as_new_record.as_null_object
 	end
@@ -9,11 +9,11 @@ describe "web/login.html.erb" do
 		assign(:user, user)
 	end
 
-	it "renders a form to login" do
+	it "renders a form to Sign Up" do
 		render
 		rendered.should have_selector("form",
 			:method => "post",
-			:action => users_login_attempt_path
+			:action => users_path
 		) do |form|
 			form.should have_selector("input", :type => 'submit')
 		end
@@ -31,12 +31,34 @@ describe "web/login.html.erb" do
 		end
 	end
 
+	it "renders a text field for the email" do
+		user.stub(:email => "wairung3421@gmail.com")
+		render
+		rendered.should have_selector("form") do |form|
+		    form.should have_selector("input",
+		      :type => "text",
+		      :name => "user[email]",
+		      :value => "wairung3421@gmail.com"
+			)
+		end
+	end
+
 	it "renders a password field" do
 		render
 		rendered.should have_selector("form") do |form|
 			form.should have_selector("input",
 				:type => "password",
 				:name => "user[password]"
+			)
+		end
+	end
+
+	it "renders a password confirmation field" do
+		render
+		rendered.should have_selector("form") do |form|
+			form.should have_selector("input",
+				:type => "password",
+				:name => "user[password_confirmation]"
 			)
 		end
 	end

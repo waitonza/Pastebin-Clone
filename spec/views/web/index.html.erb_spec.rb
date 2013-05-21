@@ -5,4 +5,9 @@ describe "web/index.html.erb" do
 		render
 		rendered.should contain("Login")
 	end
+
+	it "display a create new pastebin" do
+		render
+		rendered.should contain("Create new Pastebin")
+	end
 end
