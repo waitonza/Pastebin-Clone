@@ -1,5 +1,28 @@
 <h1>Paste Bin</h1>
+
+<% if !session[:user_id] %>
 <%= link_to "Login", web_login_path %>
 <%= link_to "Registeration", new_user_path %>
-<br>
+<% else %>
+<p>Welcome, <%=@current_user.username%></p>
+<%= link_to "Logout", users_logout_path %>
+<% end %>
+
+<h2>Listing Pastes</h2>
 <%= link_to "Create new Pastebin", new_web_path %>
+ 
+<table>
+  <tr>
+    <th>Paste Name</th>
+    <th>By User</th>
+    <th>Actions</th>
+  </tr>
+ 
+<% @posts.each do |post| %>
+  <tr>
+    <td><%= post.name %></td>
+    <td><%= post.user %></td>
+    <td><%= link_to 'Show', post %></td>
+  </tr>
+<% end %>
+</table>

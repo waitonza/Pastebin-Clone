@@ -32,11 +32,11 @@ describe "web/new.html.erb" do
 	end
 
 	it "renders a text area field for the paste input" do
-		post.stub(:newpaste => "Test Paste 21312321312")
+		post.stub(:paste_content => "Test Paste 21312321312")
 		render
 		rendered.should have_selector("form") do |form|
 		    form.should have_selector("textarea",
-		      :name => "post[newpaste]",
+		      :name => "post[paste_content]",
 			)
 		end
 		rendered.should contain("Test Paste 21312321312")

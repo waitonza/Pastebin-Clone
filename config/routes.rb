@@ -1,4 +1,5 @@
 PatebinClone::Application.routes.draw do
+  get "posts/show"
   get "users/new"
   get "web/new"
   get "users/login"

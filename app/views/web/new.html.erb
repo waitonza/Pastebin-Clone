@@ -5,9 +5,15 @@
 	  <%= f.label :name %>
 	  <%= f.text_field :name %>
 	  <br>
-	  <%= f.label :newpaste %> <br>
-	  <%= f.text_area :newpaste %>
+	  <%= f.label :paste_content %> <br>
+	  <%= f.text_area :paste_content %>
 	  <br>
+	  
+	  <% if !session[:user_id] %>
+  	  <%= f.hidden_field :user, :value => "Anonymous" %>
+	  <% else %>
+	  <%= f.hidden_field :user, :value => @current_user.username %>
+	  <% end %>
 	  <%= f.submit "Submit" %>
 	<% end %>
 

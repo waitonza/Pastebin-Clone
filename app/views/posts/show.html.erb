@@ -1,0 +1,18 @@
+<h1>Paste Bin - Show</h1>
+
+<p>
+  <b>Name:</b>
+  <%= @post.name %>
+</p>
+
+<p>
+  <b>Paste Content:</b><br>
+  <%= @post.paste_content %>
+</p>
+
+<p>
+  <b>By :</b>
+  <%= @post.user %>
+</p>
+
+<%= link_to "Back to home page", web_index_path %>
