@@ -30,6 +30,12 @@ Paste Bin (Clone) For Software Testing Course (01219343)
 
 	rake cucumber
 
+** Note: If it cannot test, please try migarte db first.
+
+	rake db:migrate
+	rake db:test:load
+	rake db:test:prepare
+
 ### Members :
 
 - Mr. Wairung Tiranalinvit 		5310545620
