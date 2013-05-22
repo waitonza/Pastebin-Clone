@@ -17,18 +17,24 @@ describe PostsController do
 
 	  it "saves the paste" do
 	  	post1.should_receive(:save)
-	  	post :create
+	  	post :create, :post => {"name" => "Test paste",
+	    		"user" => "ABC",
+	    		"paste_content" => "PASTE TEST TEST"}
 	  end
 
 	  context "when the paste saves successfully" do
 	    it "sets a flash[:notice] message" do
-	    	post :create
+	    	post :create, :post => {"name" => "Test paste",
+	    		"user" => "ABC",
+	    		"paste_content" => "PASTE TEST TEST"}
 	    	flash[:notice].should eq("You Paste successfully")
 	    	flash[:color].should eq("valid")
 	    end
 
 	    it "redirect to the Web index" do
-	    	post :create
+	    	post :create, :post => {"name" => "Test paste",
+	    		"user" => "ABC",
+	    		"paste_content" => "PASTE TEST TEST"}
 	    	response.should redirect_to(:action => 'show', :id => assigns[:post])
 	  	end
 	  end
@@ -39,13 +45,17 @@ describe PostsController do
 	  	end
 
 	     it "sets a flash[:notice] message" do
-	     	post :create
+	     	post :create, :post => {"name" => "Test paste",
+	    		"user" => "ABC",
+	    		"paste_content" => "PASTE TEST TEST"}
 	     	flash[:notice].should eq("Form is invalid")
 	    	flash[:color].should eq("invalid")
 	     end
 
 	     it "renders the new template" do
-	     	post :create
+	     	post :create, :post => {"name" => "Test paste",
+	    		"user" => "ABC",
+	    		"paste_content" => "PASTE TEST TEST"}
 	    	response.should redirect_to(:controller => 'web', :action => 'new', :post => assigns[:post])
 	     end
 	  end

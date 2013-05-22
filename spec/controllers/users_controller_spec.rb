@@ -34,18 +34,27 @@ describe UsersController do
 
 	  it "saves the user" do
 	  	user.should_receive(:save)
-	  	post :create
+	  	post :create, :user => {"username" => "ABC",
+	    		"email" => "ABC@gmail.com",
+	    		"password" => "1234567",
+	    		"password_confirmation" => "1234567"}
 	  end
 
 	  context "when the user saves successfully" do
 	    it "sets a flash[:notice] message" do
-	    	post :create
+	    	post :create, :user => {"username" => "ABC",
+	    		"email" => "ABC@gmail.com",
+	    		"password" => "1234567",
+	    		"password_confirmation" => "1234567"}
 	    	flash[:notice].should eq("You Signed up successfully")
 	    	flash[:color].should eq("valid")
 	    end
 
 	    it "redirect to the Web index" do
-	    	post :create
+	    	post :create, :user => {"username" => "ABC",
+	    		"email" => "ABC@gmail.com",
+	    		"password" => "1234567",
+	    		"password_confirmation" => "1234567"}
 	    	response.should redirect_to(:controller => 'web', :action => 'index')
 	  	end
 	  end
@@ -56,13 +65,19 @@ describe UsersController do
 	  	end
 
 	     it "sets a flash[:notice] message" do
-	     	post :create
+	     	post :create, :user => {"username" => "ABC",
+	    		"email" => "ABC@gmail.com",
+	    		"password" => "1234567",
+	    		"password_confirmation" => "1234567"}
 	     	flash[:notice].should eq("Form is invalid")
 	    	flash[:color].should eq("invalid")
 	     end
 
 	     it "renders the new template" do
-	     	post :create
+	     	post :create, :user => {"username" => "ABC",
+	    		"email" => "ABC@gmail.com",
+	    		"password" => "1234567",
+	    		"password_confirmation" => "1234567"}
 	     	response.should render_template("new")
 	     end
 	  end

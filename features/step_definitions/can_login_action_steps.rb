@@ -1,21 +1,25 @@
-Given(/^I am not login with I remember my username and my password$/) do
-	visit web_index_path
-	click_link "Login"
+Given(/^I am not login$/) do
+  	visit web_index_path
+  	page.should contain("Login")
+ 	page.should contain("Registeration")
 end
 
-When(/^I fill "(.*?)" with my username$/) do |username|
-	fill_in "Username", :with => username
+Given(/^I go to login page$/) do
+  	click_link "Login"
 end
 
-When(/^I fill "(.*?)" with my password$/) do |password|
-	fill_in "Password", :with => password
+When(/^I fill "(.*?)" with my username to login$/) do |username|
+	fill_in "username", :with => username
 end
 
-When(/^I click Login button$/) do
-	click_button "Login"
+When(/^I fill "(.*?)" with my password to login$/) do |password|
+	fill_in "password", :with => password
 end
 
-Then(/^I shall see home webpage$/) do
-	page.should contain("Paste Bin")
-	page.should contain("Login")
+When(/^I click Login button to login$/) do
+	click_button "Log In"
+end
+
+Then(/^I shall see login page with errors$/) do
+	page.should contain("Invalid Username or Password")
 end
