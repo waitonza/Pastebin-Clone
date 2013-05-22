@@ -14,8 +14,11 @@ describe "web/index.html.erb" do
 		rendered.should contain("Login")
 	end
 
-	it "display a create new pastebin" do
+	it "display a Listiing Pastes" do
 		render
-		rendered.should contain("Create new Pastebin")
+		rendered.should contain("Listing Pastes")
+		rendered.should contain("Paste Name")
+		rendered.should contain("By User")
+		rendered.should contain("Actions")
 	end
 end
