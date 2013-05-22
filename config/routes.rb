@@ -1,4 +1,5 @@
 PatebinClone::Application.routes.draw do
+  root :to => "web#index"
   get "posts/show"
   get "users/new"
   get "web/new"

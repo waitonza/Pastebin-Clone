@@ -12,7 +12,11 @@ Paste Bin (Clone) For Software Testing Course (01219343)
 
 ### How to test :
 
-- RSpec for Unit Testing
+1.) bundle install in Pastebin-Clone Directory
+
+	bundle install
+
+2.) RSpec for Unit Testing
 
 	rake spec
 
@@ -22,7 +26,7 @@ Paste Bin (Clone) For Software Testing Course (01219343)
 
 	rake spec:models
 
-- Cucumber for Functional/Integration Testing
+3.) Cucumber for Functional/Integration Testing
 
 	rake cucumber
 
